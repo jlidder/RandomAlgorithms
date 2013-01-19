@@ -7,7 +7,7 @@ public class JavaAlgorithms
 	 * INPUT: Accepts an ArrayList of positive integers.
 	 * OUTPUT: Returns the value that is duplicated in the input list.
 	 *         Returns -1 if no duplicate is found.
-	 * NOTE: Performance is better than O(n^2). I think this is O(nLogn)?
+	 * NOTE: Performance is better than O(n^2).
 	 */
 	public static int ReturnDuplicate(ArrayList<Integer> list)
 	{
@@ -17,9 +17,9 @@ public class JavaAlgorithms
 		{
 			if(hm.get(memberOfList)==null)
 				hm.put(memberOfList, memberOfList);
-			
+				
 			else // first sign of a duplicate value.
-				return hm.get(memberOfList);
+				return memberOfList;
 		}
 		return -1;
 	}
